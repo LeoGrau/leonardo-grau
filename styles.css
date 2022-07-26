@@ -190,7 +190,8 @@ hr.line-v {
 #about-me > .content,
 #projects > .content {
   display: flex;
-  width: 70%;
+  gap: 60px;
+  width: 85%;
 }
 
 /* projects */
@@ -258,18 +259,28 @@ hr.line-v {
 }
 
 footer {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: var(--slate);
   font-family: "Red Hat Mono", monospace;
 }
 
 footer > p {
   font-size: 12px;
-  padding: 20px 0;
+  padding: 0 0 15px 0;
+}
+
+footer > .social {
+  display: none;
 }
 
 @media (max-width: 896px) {
-
+  .main-intro .content > h1:nth-child(2),
+  .main-intro .content > h1:nth-child(3) {
+    font-size: 7vw;
+  }
 
   nav > ul {
     display: none;
@@ -313,7 +324,7 @@ footer > p {
   .nav-options button.button-transparent {
     width: 30px;
     margin-top: 10px;
-    align-self: flex-end; 
+    align-self: flex-end;
     visibility: hidden;
   }
 
@@ -332,5 +343,15 @@ footer > p {
     color: var(--turquoise);
     font-size: 13px;
     font-family: "Red Hat Mono", monospace;
+  }
+
+  footer > .social {
+    display: block;
+    position:relative;
+  }
+
+  footer > .social > .social-links {
+    display: flex;
+    flex-direction: row;
   }
 }

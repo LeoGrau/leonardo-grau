@@ -30,6 +30,10 @@ function closeNavOptions() {
   console.log("Clicked!");
 }
 
+function goToCurriculumPdf() {
+  window.open("../assets/pdf/curriculum.pdf", "_blank");
+}
+
 function main() {
 
   window.onscroll = () => {
