@@ -33,7 +33,7 @@ function closeNavOptions() {
 }
 
 function goToCurriculumPdf() {
-  window.go("https://leograu.github.io/leonardo-grau/assets/pdf/curriculum.pdf", "_blank");
+  window.open("https://leograu.github.io/leonardo-grau/assets/pdf/curriculum.pdf", "_blank");
 }
 
 function main() {
