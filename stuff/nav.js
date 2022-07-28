@@ -1,6 +1,7 @@
 var navbar = document.getElementById("navbar");
 var sidenavbar = document.getElementById("side-nav-options");
 var buttonCloseSideNavbar = document.getElementById("close-button");
+var url = "leonardo-grau";
 
 function changeNavColorOnScroll() {
   var pixelsGoingDown = window.scrollY;
@@ -20,6 +21,7 @@ function showNavOptions() {
     buttonCloseSideNavbar.style.visibility = "visible";
     sidenavbar.style.width = document.documentElement.clientWidth * 0.3+ "px";
   }
+  console.log("Clicked!");
 }
 
 function closeNavOptions() {
@@ -31,7 +33,7 @@ function closeNavOptions() {
 }
 
 function goToCurriculumPdf() {
-  window.open("../assets/pdf/curriculum.pdf", "_blank");
+  window.go("https://leograu.github.io/leonardo-grau/assets/pdf/curriculum.pdf", "_blank");
 }
 
 function main() {

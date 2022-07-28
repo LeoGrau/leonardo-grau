@@ -29,6 +29,11 @@ nav#navbar {
   z-index: 7;
 }
 
+#side-nav-options button.button-transparent,
+#navbar button.button-transparent {
+  margin-right: 5px;
+}
+
 button.button-transparent {
   display: none;
 }
@@ -59,6 +64,10 @@ nav > ul > li > a {
 #projects,
 footer {
   background-color: var(--navy);
+}
+
+#side-nav-options {
+  display: none;
 }
 
 /* main */
@@ -191,7 +200,7 @@ hr.line-v {
 #projects > .content {
   display: flex;
   gap: 60px;
-  width: 85%;
+  width: 70%;
 }
 
 /* projects */
@@ -212,7 +221,8 @@ hr.line-v {
   color: var(--lightest-slate);
   font-family: "Heebo", sans-serif;
   font-size: 20px;
-  width: 30%;
+  width: fit-content;
+  white-space: wrap;
 }
 
 .title-group > hr {
@@ -224,7 +234,9 @@ hr.line-v {
 }
 
 .square {
-  width: 100%;
+  cursor: pointer;
+  width: 80%;
+  max-width: 380px;
   aspect-ratio: 1 / 1;
   border-radius: 10px;
 }
@@ -244,7 +256,8 @@ hr.line-v {
 
 #about-me img {
   position: absolute;
-  width: 100%;
+  width: 80%;
+  max-width: 380px;
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 10px;
@@ -315,20 +328,24 @@ footer > .social {
     transition: all 0.2s ease-in-out;
   }
 
-  .nav-options > ul {
+  #side-nav-options {
+    display: flex;
+  }
+
+  #side-nav-options > ul {
     width: 100%;
     list-style: none;
     height: fit-content;
   }
 
-  .nav-options button.button-transparent {
+  #side-nav-options button.button-transparent {
     width: 30px;
     margin-top: 10px;
     align-self: flex-end;
     visibility: hidden;
   }
 
-  .nav-options > ul > li {
+  #side-nav-options > ul > li {
     text-align: center;
     line-height: 50px;
     height: 50px;
@@ -347,11 +364,15 @@ footer > .social {
 
   footer > .social {
     display: block;
-    position:relative;
+    position: relative;
   }
 
   footer > .social > .social-links {
     display: flex;
     flex-direction: row;
+  }
+  #about-me > .content,
+  #projects > .content {
+    flex-direction: column;
   }
 }
